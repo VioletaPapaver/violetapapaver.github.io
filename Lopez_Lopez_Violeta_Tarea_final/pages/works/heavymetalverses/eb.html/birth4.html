@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../../css/style.css">
+
+    <title>
+       Violeta López López
+    </title>
+</head>
+	<body>
+        <div class="menu"style="position: relative; z-index: 999;">
+            <ul class="navegation"> 
+             <li>
+                 <a href="../eternalbirth.html">[back]</a>
+             </li>
+            
+            </ul>
+         </div>
+         <div class="smalltext">
+            <p class="orbit">Two points in the space drawing orbits with their bodies<br>
+            The whole of the couples of points dancing traces to gravitational forces<br>
+        The body of the whole of the couples of points...<br>
+    a 3D dancing body that shapes an ever changing choreography</p>
+        </div>
+        <div class="smalltext2">
+            <p class="orbit">out of orbit controls</p>
+        </div>
+        <div class="smalltext3">
+            <p class="orbit">from binary ad infinitum</p>
+        </div>
+        <div class="orbitales">
+         <canvas id="glcanvas" width="100vw" height="100vh" tabindex="1"></canvas>
+
+    
+    <script type="text/javascript" src="../../../../js/patch4.js" async></script>
+    
+
+    <script type="text/javascript">
+        // disable rubberband effect on mobile devices
+        document.getElementById('glcanvas').addEventListener('touchmove', (e)=>{ e.preventDefault(); }, false);
+
+        function patchInitialized(patch) {
+            // You can now access the patch object (patch), register variable watchers and so on
+        }
+
+        function patchFinishedLoading(patch) {
+            // The patch is ready now, all assets have been loaded
+        }
+
+        document.addEventListener('CABLES.jsLoaded', function (event) {
+            CABLES.patch = new CABLES.Patch({
+                patch: CABLES.exportedPatch,
+                "prefixAssetPath": "",
+                "assetPath": "assets/",
+                "jsPath": "js/",
+                "glCanvasId": "glcanvas",
+                "glCanvasResizeToWindow": true,
+                "onPatchLoaded": patchInitialized,
+                "onFinishedLoading": patchFinishedLoading,
+                "canvas":{"alpha":true,"premultipliedAlpha":true} // make canvas transparent
+            });
+        });
+    </script>
+</div>
+       
+        </body>
+        </html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <script src="../../../../js/three.js"></script>
+    <script src="../../../../js/MTLLoader.js"></script>
+    <script src="../../../../js/OBJLoader.js"></script>
+    <script src="../../../../js/OrbitControls.js"></script>
+    <script src="../../../../js/Detector.js"></script>
+    <title>
+       Violeta López López
+    </title>
+</head>
+
+<body>
+    
+<div class="menu"style="position: relative; z-index: 9999; margin-top: -200px">
+   <ul class="navegation"> 
+    <li>
+        <a href="../eternalbirth.html">[back]</a>
+    </li>
+    
+   </ul>
+
+<div class="bigtext">
+    <p class="mod"><strong>eternal</strong></p>
+</div>
+<div class="bigtext2">
+    <p class="mod"><strong>state of...</strong></p>
+</div>
+
+</div>
+
+
+<!-- POETRYSCAPE (POESÍA OCULTA) - SOLO ACCESIBLE POR LAS PUERTAS [|] DESDE EL INICIO -->
+<div><h2 id="stroke2"></h2></div>
+<div class="space"></div>
+<div class="model">
+<canvas id="glcanvas" width="100vw" height="100vh" tabindex="1"></canvas>
+
+    
+<script type="text/javascript" src="../../../../js/patch2.js" async></script>
+    
+
+    <script type="text/javascript">
+        // disable rubberband effect on mobile devices
+        document.getElementById('glcanvas').addEventListener('touchmove', (e)=>{ e.preventDefault(); }, false);
+
+        function patchInitialized(patch) {
+            // You can now access the patch object (patch), register variable watchers and so on
+        }
+
+        function patchFinishedLoading(patch) {
+            // The patch is ready now, all assets have been loaded
+        }
+
+        document.addEventListener('CABLES.jsLoaded', function (event) {
+            CABLES.patch = new CABLES.Patch({
+                patch: CABLES.exportedPatch,
+                "prefixAssetPath": "",
+                "assetPath": "assets/",
+                "jsPath": "js/",
+                "glCanvasId": "glcanvas",
+                "glCanvasResizeToWindow": true,
+                "onPatchLoaded": patchInitialized,
+                "onFinishedLoading": patchFinishedLoading,
+                "canvas":{"alpha":true,"premultipliedAlpha":true} // make canvas transparent
+            });
+        });
+    </script>
+    </div>
+
+<!-- <script>
+
+    if (!Detector.webgl) {
+        Detector.addGetWebGLMessage();
+    }
+
+    var container;
+
+    var camera, controls, scene, renderer;
+    var lighting, ambient, keyLight, fillLight, backLight;
+
+    init();
+    animate();
+
+    function init() {
+
+        container = document.createElement('div');
+        document.body.appendChild(container);
+
+        /* Camera */
+
+        camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
+        camera.position.z = 3;
+
+        /* Scene */
+
+        scene = new THREE.Scene();
+        lighting = false;
+
+        ambient = new THREE.AmbientLight(0xffffff, 1.0);
+        scene.add(ambient);
+
+        keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 75%)'), 1.0);
+        keyLight.position.set(-100, 0, 100);
+
+        fillLight = new THREE.DirectionalLight(new THREE.Color('hsl(240, 100%, 75%)'), 0.75);
+        fillLight.position.set(100, 0, 100);
+
+        backLight = new THREE.DirectionalLight(0xffffff, 1.0);
+        backLight.position.set(100, 0, -100).normalize();
+
+        /* Model */
+
+        var mtlLoader = new THREE.MTLLoader();
+        mtlLoader.setBaseUrl('../../../../assets/3d/');
+        mtlLoader.setPath('../../../../assets/3d/');
+        mtlLoader.load('../../../../assets/3d/cubo.mtl', function (materials) {
+
+            materials.preload();
+
+            materials.materials.default.map.magFilter = THREE.NearestFilter;
+            materials.materials.default.map.minFilter = THREE.LinearFilter;
+
+            var objLoader = new THREE.OBJLoader();
+            objLoader.setMaterials(materials);
+            objLoader.setPath('../../../../assets/3d/');
+            objLoader.load('../../../../assets/3d/cubo.obj', function (object) {
+
+                scene.add(object);
+
+            });
+
+        });
+
+        /* Renderer */
+
+        renderer = new THREE.WebGLRenderer();
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setClearColor(new THREE.Color("hsl(0, 0%, 10%)"));
+
+        container.appendChild(renderer.domElement);
+
+        /* Controls */
+
+        controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.25;
+        controls.enableZoom = false;
+
+        /* Events */
+
+        window.addEventListener('resize', onWindowResize, false);
+        window.addEventListener('keydown', onKeyboardEvent, false);
+
+    }
+
+    function onWindowResize() {
+
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+    }
+
+    function onKeyboardEvent(e) {
+
+        if (e.code === 'KeyL') {
+
+            lighting = !lighting;
+
+            if (lighting) {
+
+                ambient.intensity = 0.25;
+                scene.add(keyLight);
+                scene.add(fillLight);
+                scene.add(backLight);
+
+            } else {
+
+                ambient.intensity = 1.0;
+                scene.remove(keyLight);
+                scene.remove(fillLight);
+                scene.remove(backLight);
+
+            }
+
+        }
+
+    }
+
+    function animate() {
+
+        requestAnimationFrame(animate);
+
+        controls.update();
+
+        render();
+
+    }
+
+    function render() {
+
+        renderer.render(scene, camera);
+
+    }
+
+</script>
+////////////////
+<div class="fondo"> </div>
+<script src="../../../../js/three.js"></script>
+<script src="../../../../js/GLTFLoader.js"></script>
+<script>
+    let scene, camera, renderer;
+
+    function init() {
+
+        scene= new THREE.Scene();
+        scene.background = new THREE.Color(0xdddddd);
+
+        camera = new THREE.PersepectiveCamera(40,window.innerWidth/window.innerHeight,1,5000);
+        camera.rotation.y = 45/180*Math.PI;
+        camera.position.x =800;
+        camera.position.y = 100;
+        camera.position.z = 1000;
+
+        
+        hlight = new THREE.AmbientLight (0x404040,100);
+        scene.add(hlight);
+
+        directionalLight = new THREE.DirectionalLight(0xffffff,100);
+        directionalLight.position.set(0,1,0);
+        directionalLight.castShadow = true;
+        scene.add(directionalLight);
+
+        light = new THREE.PointLight(0xc4c4c4,10);
+        light.position.set(0,300,500);
+        scene.add(light);
+
+        light2 = new THREE.PointLight(0xc4c4c4,10);
+        light2.position.set(500,100,0);
+        scene.add(light2);
+
+        light3 = new THREE.PointLight(0xc4c4c4,10);
+        light3.position.set(0,100,-500);
+        scene.add(light3);
+
+        light4 = new THREE.PointLight(0xc4c4c4,10);
+        light4.position.set(-500,300,0);
+        scene.add(light4);
+
+
+        renderer = new THREE.WebGLRenderer({antialias:true});
+        renderer.setSize(window.innerWidth.window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        let loader = THREE.GLTFLoader();
+        loader.load("../../../../assets/3d/diamant_detector.gltf", function(gltf){
+            detector = gltf.scene.children[0];
+            car.scale.set(0.5, 0.5, 0.5);
+            scene.add(gltf.scene);
+            renderer.render(scene,camera);
+
+
+        });
+    }
+        
+    init();
+</script> -->
+</body>
+
+
+</html>
