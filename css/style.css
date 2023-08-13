@@ -12,7 +12,8 @@ html{
 /*ESTILOS DE TEXTOS*/
 body {
     font-size: 24px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "FuturaPTBook";
+    /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
     background-color: black;
     overflow-x: hidden;
 } 
@@ -26,9 +27,14 @@ body.fondoinicio {
   z-index: -1;
 }
 
+@font-face {
+  font-family: "FuturaPTBook";
+  src: url('../fonts/FuturaPTBook.ttf') format('truetype');
+}
+
 p {
-  
-    font-size: 14px;
+  font-family: "FuturaPTBook";
+    font-size: 16px;
     color: white;
     text-align:center;
     margin-bottom: 50px;
@@ -41,6 +47,7 @@ span {
     margin-right: 20%;
 }
 h1{
+  font-family: "FuturaPTBook";
     color: black;
     font-size: 50px;
     position: relative; 
@@ -58,6 +65,7 @@ h3{
     text-align:center;
     margin-bottom: -40px;
     margin-top: 80px;
+    font-family: "FuturaPTBook";
 }
 
 /* Estilo de las líneas que separan los trabajos */
@@ -230,7 +238,7 @@ footer {
   font-size: 22px;
   text-align: center;
   margin-top: 150px;
-  font-family: "Mermaid";
+  font-family: "FuturaPTBook";
   
 }
 
