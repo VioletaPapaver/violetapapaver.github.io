@@ -43,9 +43,9 @@
 </div>
 <div class="works-container">
     <iframe src="https://player.vimeo.com/video/675671791?h=b75b290fde&byline=0&portrait=0" width="550" height="309" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-    <a href="../../assets/images/contrapoesialibre4.png" data-lightbox="image-set">
-    <img src="../../assets/images/contrapoesialibre4.png" height="360"/> </a>
     <iframe src="https://player.vimeo.com/video/685930546?h=06a99d2ab1&byline=0&portrait=0" width="550" height="309" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    <!-- <a href="../../assets/images/contrapoesialibre4.png" data-lightbox="image-set">
+    <img src="../../assets/images/contrapoesialibre4.png" height="360"/> </a>
     <a href="../../assets/images/contrapoesialibre1.png" data-lightbox="image-set">
     <img src="../../assets/images/contrapoesialibre1.png" height="230"/> </a>
     <a href="../../assets/images/contrapoesialibre2.png" data-lightbox="image-set">
@@ -61,9 +61,118 @@
     <a href="../../assets/images/contrapoesialibre8.png" data-lightbox="image-set">
     <img src="../../assets/images/contrapoesialibre8.png" height="230"/> </a>
     <a href="../../assets/images/contrapoesialibre9.png" data-lightbox="image-set">
-    <img src="../../assets/images/contrapoesialibre9.png" height="230"/> </a>
+    <img src="../../assets/images/contrapoesialibre9.png" height="230"/> </a> -->
 </div> 
 
+<div class="slideshow-container" style="max-width: 30%;">
+    <div class="slide fade">
+      
+      <img src="../../assets/images/contrapoesialibre4.png" height="10%" alt="Imagen 1">
+    </div>
+    <div class="slide fade">
+      
+      <img src="../../assets/images/contrapoesialibre1.png" alt="Imagen 2">
+    </div>
+    <div class="slide fade">
+      <img src="../../assets/images/contrapoesialibre2.png" alt="Imagen 2">
+    </div>
+    <div class="slide fade">
+      <img src="../../assets/images/contrapoesialibre3.png" alt="Imagen 2">
+    </div>
+    <div class="slide fade">
+      <img src="../../assets/images/contrapoesialibre5.png" alt="Imagen 2">
+    </div>
+    <div class="slide fade">
+      <img src="../../assets/images/contrapoesialibre6.png" alt="Imagen 2">
+    </div>
+    <div class="slide fade">
+      <img src="../../assets/images/contrapoesialibre7.png" alt="Imagen 2">
+    </div>
+    <div class="slide fade">
+        <img src="../../assets/images/contrapoesialibre8.png" alt="Imagen 2">
+      </div>
+      <div class="slide fade">
+        <img src="../../assets/images/contrapoesialibre9.png" alt="Imagen 2">
+      </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+  </div>
+  
+  
+  
+  <div class="thumbnail-container">
+    <div class="thumbnail" onclick="currentSlide(0)">
+      <img src="../../assets/images/contrapoesialibre4.png" style="height: 100px" alt="Imagen 1 Miniatura">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(1)">
+      <img src="../../assets/images/contrapoesialibre1.png" style="height: 100px" alt="Imagen 2 Miniatura">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(2)">
+      <img src="../../assets/images/contrapoesialibre2.png" style="height: 100px" alt="Imagen 2 Miniatura">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(3)">
+      <img src="../../assets/images/contrapoesialibre3.png" style="height: 100px" alt="Imagen 2 Miniatura">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(4)">
+      <img src="../../assets/images/contrapoesialibre5.png" style="height: 100px" alt="Imagen 2 Miniatura">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(5)">
+      <img src="../../assets/images/contrapoesialibre6.png" style="height: 100px" alt="Imagen 2 Miniatura">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(6)">
+      <img src="../../assets/images/contrapoesialibre7.png" style="height: 100px" alt="Imagen 2 Miniatura">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(6)">
+        <img src="../../assets/images/contrapoesialibre8.png" style="height: 100px" alt="Imagen 2 Miniatura">
+      </div>
+    <div class="thumbnail" onclick="currentSlide(6)">
+        <img src="../../assets/images/contrapoesialibre9.png" style="height: 100px" alt="Imagen 2 Miniatura">
+      </div>
+    
+  </div>
+  
+  <script>
+    let slideIndex = 0;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    const slides = document.getElementsByClassName("slide");
+    const thumbnails = document.getElementsByClassName("thumbnail");
+  
+    if (n >= slides.length) {
+      slideIndex = 0;
+    } else if (n < 0) {
+      slideIndex = slides.length - 1;
+    }
+  
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      thumbnails[i].classList.remove("active");
+    }
+  
+    slides[slideIndex].style.display = "block";
+    thumbnails[slideIndex].classList.add("active");
+  }
+  
+  const thumbnails = document.querySelectorAll(".thumbnail");
+  
+  thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener("click", () => {
+      currentSlide(index);
+    });
+  });
+  
+  </script>
+  
 <hr>
 <footer>
     <div class="infooter" >
