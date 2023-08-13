@@ -205,6 +205,37 @@ footer {
   
 }
 
+.eachwork{
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5; /* Inicialmente visible */
+  transition: opacity 0.3s ease;
+}
+
+.overlay p {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 150px;
+  
+}
+
+.eachwork:hover .overlay {
+  opacity: 0; /* ocultar el overlay al hacer hover */
+}
+
 /*PÁGINA DE BIO*/
 /* div para la biografía*/
 .bio{
