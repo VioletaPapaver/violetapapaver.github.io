@@ -216,6 +216,8 @@ footer {
 
 .eachwork{
   position: relative;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .overlay {
