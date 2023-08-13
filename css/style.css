@@ -768,3 +768,60 @@ input[type="submit"]:active{
 }
 
 /* GALERIA DE IMAGENES*/
+
+
+.slideshow-container {
+  position: relative;
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+}
+
+.controls {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  font-size: 30px;
+ 
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.thumbnail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.thumbnail {
+  opacity: 0.6;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.thumbnail.active {
+  opacity: 1;
+}
+

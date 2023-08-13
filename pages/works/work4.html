@@ -41,7 +41,7 @@
     <hr>
     <p style="text-align: justify; margin-left: 70px;margin-right: 70px;">Silence and poetry merge in “Poetry of the non-said” in order to find a way of expression and meaning through the non-said. The two artist books complement each other: the first one is composed of the cartographies belonging to the sound landscapes obtained through the 3D spectrograms of 32 poems on silence, which have been recorded; the second one shows the spaces open on the paper by the extraction of these 32 poems over a fragmented portrait, being just the absence of the poetry what remains, and enabling this way to see through the book, connecting different pages. The written poems are encapsulated in the wax pieces that extend to both sides. These pieces take their shape from the ear, making the empty space into material.</p>
 </div>
-<div class="works-container">
+<!-- <div class="works-container">
     <a href="../../assets/images/poesiand3.jpg" data-lightbox="image-set">
     <img src="../../assets/images/poesiand3.jpg" height="230"/> </a>
     <a href="../../assets/images/poesiand1.jpg" data-lightbox="image-set">
@@ -56,8 +56,108 @@
     <img src="../../assets/images/poesiand6.jpg" height="230"/> </a>
     <a href="../../assets/images/poesiand7.jpg" data-lightbox="image-set">
     <img src="../../assets/images/poesiand7.jpg" height="230"/> </a>
-</div> 
+</div>  -->
 
+
+<div class="slideshow-container">
+  <div class="slide fade">
+    
+    <img src="../../assets/images/poesiand3.jpg" alt="Imagen 1">
+  </div>
+  <div class="slide fade">
+    
+    <img src="../../assets/images/poesiand1.jpg" alt="Imagen 2">
+  </div>
+  <div class="slide fade">
+    <img src="../../assets/images/poesiand2.jpg" alt="Imagen 2">
+  </div>
+  <div class="slide fade">
+    <img src="../../assets/images/poesiand4.jpg" alt="Imagen 2">
+  </div>
+  <div class="slide fade">
+    <img src="../../assets/images/poesiand5.jpg" alt="Imagen 2">
+  </div>
+  <div class="slide fade">
+    <img src="../../assets/images/poesiand6.jpg" alt="Imagen 2">
+  </div>
+  <div class="slide fade">
+    <img src="../../assets/images/poesiand7.jpg" alt="Imagen 2">
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<!-- <div class="controls">
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div> -->
+
+<div class="thumbnail-container">
+  <div class="thumbnail" onclick="currentSlide(0)">
+    <img src="../../assets/images/poesiand3.jpg" style="height: 100px" alt="Imagen 1 Miniatura">
+  </div>
+  <div class="thumbnail" onclick="currentSlide(1)">
+    <img src="../../assets/images/poesiand1.jpg" style="height: 100px" alt="Imagen 2 Miniatura">
+  </div>
+  <div class="thumbnail" onclick="currentSlide(2)">
+    <img src="../../assets/images/poesiand2.jpg" style="height: 100px" alt="Imagen 2 Miniatura">
+  </div>
+  <div class="thumbnail" onclick="currentSlide(3)">
+    <img src="../../assets/images/poesiand4.jpg" style="height: 100px" alt="Imagen 2 Miniatura">
+  </div>
+  <div class="thumbnail" onclick="currentSlide(4)">
+    <img src="../../assets/images/poesiand5.jpg" style="height: 100px" alt="Imagen 2 Miniatura">
+  </div>
+  <div class="thumbnail" onclick="currentSlide(5)">
+    <img src="../../assets/images/poesiand6.jpg" style="height: 100px" alt="Imagen 2 Miniatura">
+  </div>
+  <div class="thumbnail" onclick="currentSlide(6)">
+    <img src="../../assets/images/poesiand7.jpg" style="height: 100px" alt="Imagen 2 Miniatura">
+  </div>
+  
+</div>
+
+<script>
+  let slideIndex = 0;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  const slides = document.getElementsByClassName("slide");
+  const thumbnails = document.getElementsByClassName("thumbnail");
+
+  if (n >= slides.length) {
+    slideIndex = 0;
+  } else if (n < 0) {
+    slideIndex = slides.length - 1;
+  }
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+    thumbnails[i].classList.remove("active");
+  }
+
+  slides[slideIndex].style.display = "block";
+  thumbnails[slideIndex].classList.add("active");
+}
+
+const thumbnails = document.querySelectorAll(".thumbnail");
+
+thumbnails.forEach((thumbnail, index) => {
+  thumbnail.addEventListener("click", () => {
+    currentSlide(index);
+  });
+});
+
+</script>
 
 <!-- <div class="containercon">
     <div class="mySlides">
