@@ -252,9 +252,11 @@ footer {
 /* div para la biografía*/
 .bio{
     margin-top: 80px;
+    margin-left: 200px;
+    margin-right: 200px;
     margin-bottom: 80px;
     position: relative;
-    text-align: center;
+    text-align: justify;
     display: flex;
     flex-direction: column;
     justify-content:center;
