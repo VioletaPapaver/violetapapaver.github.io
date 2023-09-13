@@ -68,10 +68,10 @@ function soundPlay2() {
     sound2.play();
 }
 function replaceText() {
-    div5.innerHTML = "que vela y revela";
+    div5.innerHTML = "that veils and reveals";
 }
 function firstText() {
-    div5.innerHTML = "Bajo el negro";
+    div5.innerHTML = "Beneath the black";
 }
 function escucha() {
   poesia.play();
