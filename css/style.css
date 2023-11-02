@@ -67,7 +67,18 @@ h3{
     margin-top: 80px;
     font-family: "FuturaPTBook";
 }
+@font-face {
+  font-family: "Keytin";
+  src: url('../fonts/Keytin-Light.ttf') format('truetype');
+}
+.titulosworks{
+  font-family: "Keytin";
+    font-size: 16px;
+    color: white;
+    text-align:center;
+    margin-bottom: 50px;
 
+}
 /* Estilo de las líneas que separan los trabajos */
 hr {
     width: 50%;
@@ -231,16 +242,16 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  opacity: 0.75; /* Inicialmente visible */
+  opacity: 0.85; /* Inicialmente visible */
   transition: opacity 0.3s ease;
 }
 
 .overlay p {
   color: white;
-  font-size: 22px;
+  font-size: 30px;
   text-align: center;
   margin-top: 150px;
-  font-family: "FuturaPTBook";
+  font-family: "Keytin";
   
 }
 
