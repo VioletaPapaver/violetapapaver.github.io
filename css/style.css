@@ -262,17 +262,30 @@ footer {
 
 /*PÁGINA DE BIO*/
 /* div para la biografía*/
+.contenedorbio {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  /*align-items: center; /* Centrar verticalmente */
+  margin-top: 50px;
+}
+
+.columnabio {
+  width: 20%; /* Cada columna ocupa la mitad del contenedor */
+  padding: 20px; /* Espacio alrededor del contenido */
+}
+
+
 .bio{
-    margin-top: 80px;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-top: 50px;
+    margin-left: 210px;
+    margin-right: 210px;
     margin-bottom: 80px;
     position: relative;
     text-align: justify;
     display: flex;
     flex-direction: column;
     justify-content:center;
-    align-items: center;
+    /*align-items: center;*/
 }
 /* estilo de texto biografía*/
 .centro{
