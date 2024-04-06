@@ -271,7 +271,7 @@ footer {
 }
 
 .columnabio {
-  width: 20%; /* Cada columna ocupa la mitad del contenedor */
+  width: 30svh; /* Cada columna ocupa la mitad del contenedor */
   padding: 20px; /* Espacio alrededor del contenido */
 }
 
