@@ -262,6 +262,7 @@ footer {
 
 /*PÁGINA DE BIO*/
 /* div para la biografía*/
+
 .contenedorbio {
   display: flex;
   justify-content: center; /* Centrar horizontalmente */
@@ -279,7 +280,7 @@ footer {
     margin-top: 50px;
     margin-left: 210px;
     margin-right: 210px;
-    margin-bottom: 80px;
+    margin-bottom: 70px;
     position: relative;
     text-align: justify;
     display: flex;
