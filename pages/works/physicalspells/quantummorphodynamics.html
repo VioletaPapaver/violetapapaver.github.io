@@ -36,7 +36,102 @@
     </h3>
   
     <p>2025<br>
-        Interactive multimedia installation<br>
-        
-        
+        Interactive multimedia installation<br>    
    </p>
+   <hr>
+      <div class="works-container">
+    <iframe src="https://player.vimeo.com/video/1118515229?h=5dddfe60be&title=0&byline=0&portrait=0" width="854" height="480" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p style="text-align: justify; margin-left: 150px;margin-right: 150px;margin-top: -80px;">Quantum Morphodynamics proposes an analogy between quarks and morphemes, understanding them as elementary particles in the fields of physics and linguistics respectively.
+</p>
+<p style="text-align: justify; margin-left: 150px;margin-right: 150px;margin-bottom: 10px;margin-top: -40px;">The interactive installation comprises a group of game controllers arranged 3 by 3 forming RGB triads, with which the public can interact triggering and controlling the sound of morphemes in a surround sound system. In a interpretation of quantum chromodynamics, sounds get louder when they get virtually further from each other (as the force between quarks becomes stronger when separating them). When they reach the maximum volume, they are annihilated by another sound, making it impossible to be understood (as when a quark is separated, an anti-quark is created, making it impossible to “see” the color). 
+
+</p>
+<p style="text-align: justify; margin-left: 150px;margin-right: 150px;margin-bottom: 50px;;">In addition, the projection of fragmented texts is also triggered by the controllers, making it necessary for several people to interact together in order to discover them.
+    
+</p>
+
+<div class="slideshow-container" style="max-width: 50%;">
+    <div class="slide fade">
+      
+      <img src="../../../assets/images/qmd_1.jpg" alt="Imagen 1">
+    </div>
+    <div class="slide fade">
+      
+      <img src="../../../assets/images/qmd_2.jpg" alt="Imagen 2">
+    </div>
+    <div class="slide fade">
+      <img src="../../../assets/images/qmd_3.jpg"   alt="Imagen 2">
+    </div>
+    <div class="slide fade">
+      <img src="../../../assets/images/qmd_4.jpg" alt="Imagen 2">
+    </div>
+
+    
+    <a class="prev" style= "color: orangered;" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" style= "color: orangered;" onclick="plusSlides(1)">&#10095;</a>
+  
+  </div>
+  
+  
+  
+  <div class="thumbnail-container">
+    <div class="thumbnail" onclick="currentSlide(0)">
+      <img src="../../../assets/images/qmd_1.jpg" style="height: 100px" alt="Imagen 1 Miniatura">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(1)">
+      <img src="../../../assets/images/qmd_2.jpg" style="height: 100px" alt="Imagen 2 Miniatura">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(2)">
+      <img src="../../../assets/images/qmd_3.jpg" style="height: 100px" alt="Imagen 2 Miniatura">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(3)">
+      <img src="../../../assets/images/qmd_4.jpg" style="height: 100px" alt="Imagen 2 Miniatura">
+    </div>
+
+    
+  </div>
+  
+  <script>
+    let slideIndex = 0;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    const slides = document.getElementsByClassName("slide");
+    const thumbnails = document.getElementsByClassName("thumbnail");
+  
+    if (n >= slides.length) {
+      slideIndex = 0;
+    } else if (n < 0) {
+      slideIndex = slides.length - 1;
+    }
+  
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      thumbnails[i].classList.remove("active");
+    }
+  
+    slides[slideIndex].style.display = "block";
+    thumbnails[slideIndex].classList.add("active");
+  }
+  
+  const thumbnails = document.querySelectorAll(".thumbnail");
+  
+  thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener("click", () => {
+      currentSlide(index);
+    });
+  });
+  
+  </script>
+<hr>
+
+

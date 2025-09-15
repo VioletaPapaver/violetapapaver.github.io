@@ -36,7 +36,150 @@
     </h3>
     
     <p>2025<br>
-        VR<br>
-        
-        
+        VR<br>     
    </p>
+   <hr>
+      <div class="works-container">
+    <iframe src="https://player.vimeo.com/video/1118711858?h=5dddfe60be&title=0&byline=0&portrait=0" width="854" height="480" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p style="text-align: justify; margin-left: 150px;margin-right: 150px;margin-top: -80px;">The m-process is a VR experience that takes its starting point in the nuclide chart and
+the chains of reactions related to the r-process, p-process, s-process, etc, undestanding
+them as a kind of syntax of physics. From this point, the artwork shifts its focus to a
+position more centered in poetry and metaphors as catalyst for new possibilities and
+open meanings, creating an environment where collisions between protons, neutrons
+and neutrinos lead to new visuals, sounds, texts in an ever-changing arena.
+</p>
+<p style="text-align: justify; margin-left: 150px;margin-right: 150px;margin-top: -40px;">In the interactive VR environment we find a field with spheres that stand for protons, neutrons and neutrinos through analogies and metaphoric links:<br>
+
+- Protons in physics are the words in language, here symbolized by fire<br>
+
+- Neutrons in physics are silences in language, here symbolized by water<br>
+
+- Neutrinos in physics are secrets in language, here symbolized by air<br>
+</p>
+<p style="text-align: justify; margin-left: 150px;margin-right: 150px;margin-top: -40px;">The person interacting becomes thus the force that creates reactions between particles, giving birth to new elements (in this case, visuals, sounds and texts that appear for a short time whith each collision between different spheres to vanish again).</p>
+
+<div class="slideshow-container" style="max-width: 50%;">
+
+    <div class="slide fade">
+      
+      <img src="../../../assets/images/mprocess_1.jpg" alt="Imagen 1">
+    </div>
+    <div class="slide fade">
+      
+      <img src="../../../assets/images/mprocess_2.jpg" alt="Imagen 2">
+    </div>
+    <div class="slide fade">
+      <img src="../../../assets/images/mprocess_3.jpg"   alt="Imagen 2">
+    </div>
+    <div class="slide fade">
+      <img src="../../../assets/images/mprocess_5.jpg" alt="Imagen 2">
+    </div>
+    <div class="slide fade">
+      <img src="../../../assets/images/mprocess_6.jpg" alt="Imagen 2">
+    </div>
+        <div class="slide fade">
+      <img src="../../../assets/images/mprocess_7.jpg"   alt="Imagen 2">
+    </div>
+    <div class="slide fade">
+      <img src="../../../assets/images/mprocess_8.jpg" alt="Imagen 2">
+    </div>
+    <div class="slide fade">
+      <img src="../../../assets/images/mprocess_9.jpg" alt="Imagen 2">
+    </div>
+     <div class="slide fade">
+      <img src="../../../assets/images/mprocess_10.jpg" alt="Imagen 2">
+    </div>
+     <div class="slide fade">
+      <img src="../../../assets/images/mprocess_12.jpg" alt="Imagen 2">
+    </div>
+     <div class="slide fade">
+      <img src="../../../assets/images/mprocess_13.jpg" alt="Imagen 2">
+    </div>
+    
+    <a class="prev" style= "color: orangered;" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" style= "color: orangered;" onclick="plusSlides(1)">&#10095;</a>
+  
+  </div>
+  
+  
+  
+  <div class="thumbnail-container">
+    <div class="thumbnail" onclick="currentSlide(0)">
+      <img src="../../../assets/images/mprocess_1.jpg" style="height: 60px" alt="Imagen 1 Miniatura">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(1)">
+      <img src="../../../assets/images/mprocess_2.jpg" style="height: 60px" alt="Imagen 2 Miniatura">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(2)">
+      <img src="../../../assets/images/mprocess_3.jpg" style="height: 60px" alt="Imagen 2 Miniatura">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(3)">
+      <img src="../../../assets/images/mprocess_5.jpg" style="height: 60px" alt="Imagen 2 Miniatura">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(4)">
+      <img src="../../../assets/images/mprocess_6.jpg" style="height: 60px" alt="Imagen 2 Miniatura">
+    </div>
+        <div class="thumbnail" onclick="currentSlide(5)">
+      <img src="../../../assets/images/mprocess_7.jpg" style="height: 60px" alt="Imagen 2 Miniatura">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(6)">
+      <img src="../../../assets/images/mprocess_8.jpg" style="height: 60px" alt="Imagen 2 Miniatura">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(7)">
+      <img src="../../../assets/images/mprocess_9.jpg" style="height: 60px" alt="Imagen 2 Miniatura">
+    </div>
+   <div class="thumbnail" onclick="currentSlide(7)">
+      <img src="../../../assets/images/mprocess_10.jpg" style="height: 60px" alt="Imagen 2 Miniatura">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(7)">
+      <img src="../../../assets/images/mprocess_12.jpg" style="height: 60px" alt="Imagen 2 Miniatura">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(7)">
+      <img src="../../../assets/images/mprocess_13.jpg" style="height: 60px" alt="Imagen 2 Miniatura">
+    </div>
+    
+  </div>
+  
+  <script>
+    let slideIndex = 0;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    const slides = document.getElementsByClassName("slide");
+    const thumbnails = document.getElementsByClassName("thumbnail");
+  
+    if (n >= slides.length) {
+      slideIndex = 0;
+    } else if (n < 0) {
+      slideIndex = slides.length - 1;
+    }
+  
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      thumbnails[i].classList.remove("active");
+    }
+  
+    slides[slideIndex].style.display = "block";
+    thumbnails[slideIndex].classList.add("active");
+  }
+  
+  const thumbnails = document.querySelectorAll(".thumbnail");
+  
+  thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener("click", () => {
+      currentSlide(index);
+    });
+  });
+  
+  </script>
+
+<hr>

@@ -36,7 +36,119 @@
     </h3>
     <p>(SEparator for PHonetic Reactions)<br>
     <p>2025<br>
-        Interactive multimedia installation<br>
-        
-        
+        Interactive multimedia installation<br>    
    </p>
+   <hr>
+      
+   <div class="works-container">
+    <iframe src="https://player.vimeo.com/video/1118512487?h=5dddfe60be&title=0&byline=0&portrait=0" width="854" height="480" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p style="text-align: justify; margin-left: 150px;margin-right: 150px;margin-top: -80px;">SEPHOR is an interactive installation that draws parallelisms between our phonetic system and SECAR (SEparator for CApture Reactions) at FRIB. The core of the installation is a video game-like environment that depicts the inside of SECAR, now reinterpreted as SEPHOR, as a tunnel composed of organs related to the physiology of phonetics. The public can go through and interact with the elements in the space, triggering sounds recorded in SECAR (both audible and electromagnetic). There is an additional level of interaction between the phonetics of SEPHOR and those of the spectators: a microphone receives input from their voices, not only displaying their spectrogram blended with the ion optics of SECAR, but also triggering changes in audio-reactive elements in the interactive environment.
+</p>
+
+<div class="slideshow-container" style="max-width: 50%;">
+    <div class="slide fade">
+      
+      <img src="../../../assets/images/sephor_1.jpg" alt="Imagen 1">
+    </div>
+    <div class="slide fade">
+      
+      <img src="../../../assets/images/sephor_2.jpg" alt="Imagen 2">
+    </div>
+    <div class="slide fade">
+      <img src="../../../assets/images/sephor_3.jpg"   alt="Imagen 2">
+    </div>
+    <div class="slide fade">
+      <img src="../../../assets/images/sephor_4.jpg" alt="Imagen 2">
+    </div>
+    <div class="slide fade">
+      <img src="../../../assets/images/sephor_5.jpg" alt="Imagen 2">
+    </div>
+        <div class="slide fade">
+      <img src="../../../assets/images/sephor_6.jpg"   alt="Imagen 2">
+    </div>
+    <div class="slide fade">
+      <img src="../../../assets/images/sephor_7.jpg" alt="Imagen 2">
+    </div>
+    <div class="slide fade">
+      <img src="../../../assets/images/sephor_8.jpg" alt="Imagen 2">
+    </div>
+    
+    <a class="prev" style= "color: orangered;" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" style= "color: orangered;" onclick="plusSlides(1)">&#10095;</a>
+  
+  </div>
+  
+  
+  
+  <div class="thumbnail-container">
+    <div class="thumbnail" onclick="currentSlide(0)">
+      <img src="../../../assets/images/sephor_1.jpg" style="height: 100px" alt="Imagen 1 Miniatura">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(1)">
+      <img src="../../../assets/images/sephor_2.jpg" style="height: 100px" alt="Imagen 2 Miniatura">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(2)">
+      <img src="../../../assets/images/sephor_3.jpg" style="height: 100px" alt="Imagen 2 Miniatura">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(3)">
+      <img src="../../../assets/images/sephor_4.jpg" style="height: 100px" alt="Imagen 2 Miniatura">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(4)">
+      <img src="../../../assets/images/sephor_5.jpg" style="height: 100px" alt="Imagen 2 Miniatura">
+    </div>
+        <div class="thumbnail" onclick="currentSlide(5)">
+      <img src="../../../assets/images/sephor_6.jpg" style="height: 100px" alt="Imagen 2 Miniatura">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(6)">
+      <img src="../../../assets/images/sephor_7.jpg" style="height: 100px" alt="Imagen 2 Miniatura">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(7)">
+      <img src="../../../assets/images/sephor_8.jpg" style="height: 100px" alt="Imagen 2 Miniatura">
+    </div>
+   
+    
+  </div>
+  
+  <script>
+    let slideIndex = 0;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    const slides = document.getElementsByClassName("slide");
+    const thumbnails = document.getElementsByClassName("thumbnail");
+  
+    if (n >= slides.length) {
+      slideIndex = 0;
+    } else if (n < 0) {
+      slideIndex = slides.length - 1;
+    }
+  
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      thumbnails[i].classList.remove("active");
+    }
+  
+    slides[slideIndex].style.display = "block";
+    thumbnails[slideIndex].classList.add("active");
+  }
+  
+  const thumbnails = document.querySelectorAll(".thumbnail");
+  
+  thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener("click", () => {
+      currentSlide(index);
+    });
+  });
+  
+  </script>
+
+<hr>
